@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Data
 {
@@ -12,15 +14,16 @@ namespace Data
         {
         }
 
-        public Item(Guid id, string name, int quantity)
+        public Item(string name, int quantity, double price)
         {
-            Id = id;
+            Id = Guid.NewGuid();
             Name = name;
             Quantity = quantity;
+            Price = price;
         }
-
         public Guid Id { get; set; }
         public string Name { get; set; }
         public int Quantity { get; set; }
+        public double Price { get; set; }
     }
 }
