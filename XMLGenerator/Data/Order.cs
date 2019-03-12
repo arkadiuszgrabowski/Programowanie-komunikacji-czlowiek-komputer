@@ -6,14 +6,28 @@ using System.Threading.Tasks;
 
 namespace Data
 {
+
     public class Order
     {
-        private long Id { get; set; }
-        //Content trzeba zrobić jako listę przedmiotów chyba to bedzie złożony typ danych
-        private String Content { get; set; }
-        private String Address { get; set; }
-        private DateTime SendingDateTime { get; set; }
-        private DateTime EstimatedDelivery { get; set; }
-        private OrderType Type { get; set; }
+        public Order()
+        {
+        }
+
+        public Order(Guid id, List<Item> content, Address address, DateTime sendingDateTime, DateTime estimatedDelivery, OrderType type)
+        {
+            Id = id;
+            Content = content;
+            Address = address;
+            SendingDateTime = sendingDateTime;
+            EstimatedDelivery = estimatedDelivery;
+            Type = type;
+        }
+
+        public Guid Id { get; set; }
+        public List<Item> Content { get; set; }
+        public Address Address { get; set; }
+        public DateTime SendingDateTime { get; set; }
+        public DateTime EstimatedDelivery { get; set; }
+        public OrderType Type { get; set; }
     }
 }
