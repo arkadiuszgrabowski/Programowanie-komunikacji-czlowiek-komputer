@@ -18,10 +18,14 @@ namespace Logic
     {
         public static void Serialize(List<Order> objectToSerialize, string fileName)
         {
-            XmlWriterSettings settings = new XmlWriterSettings { Indent = true };
-            DataContractSerializer serializer = new DataContractSerializer(typeof(List<Order>));
-            using (XmlWriter writer = XmlWriter.Create(fileName, settings))
-                serializer.WriteObject(writer, objectToSerialize);
+            //XmlWriterSettings settings = new XmlWriterSettings { Indent = true };
+            //DataContractSerializer serializer = new DataContractSerializer(typeof(List<Order>));
+            //using (XmlWriter writer = XmlWriter.Create(fileName, settings))
+            //    serializer.WriteObject(writer, objectToSerialize);
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Order>));
+            TextWriter writer = new StreamWriter(fileName);
+            serializer.Serialize(writer, objectToSerialize);
+            writer.Close();
         }
     }
 }

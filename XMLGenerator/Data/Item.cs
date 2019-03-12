@@ -21,8 +21,10 @@ namespace Data
             Quantity = quantity;
             Price = price;
         }
+        [XmlAttribute]
         public Guid Id { get; set; }
         public string Name { get; set; }
+        [XmlAttribute]
         public int Quantity { get; set; }
         public double Price { get; set; }
     }

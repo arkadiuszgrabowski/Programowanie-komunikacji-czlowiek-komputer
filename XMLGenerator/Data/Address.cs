@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Data
 {
@@ -25,6 +26,7 @@ namespace Data
         public string City { get; set; }
         public string Street { get; set; }
         public string Property { get; set; }
+        [XmlAttribute]
         public string ZipCode { get; set; }
     }
 }

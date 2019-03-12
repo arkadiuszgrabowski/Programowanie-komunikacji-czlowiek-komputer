@@ -29,13 +29,15 @@ namespace Data
             };
             Price = Math.Round(x,2);
         }
-        
+        [XmlAttribute]
         public Guid Id { get; set; }
         [XmlArrayItem("Item")]
         public List<Item> Content { get; set; }
+        [XmlElement]
         public Address Address { get; set; }
         public string SendingDateTime { get; set; }
         public string EstimatedDelivery { get; set; }
+        [XmlAttribute("OrderType")]
         public OrderType Type { get; set; }
         public double Price { get; set; }
     }
