@@ -13,6 +13,7 @@ namespace Tests
         public void GeneraterXml()
         {
             string dateTimeFormat = "yyyy-MM-dd H:mm:ss";
+            string deliveryDateTimeFormat = "yyyy-MM-dd";
             #region Addresses
             Address address1 = new Address("Łódź", "Politechniki", "3a", "93-501");
             Address address2 = new Address("Łęczyca", "Belwederska", "79a", "99-100");
@@ -67,29 +68,29 @@ namespace Tests
             List<Item> toOrder23 = new List<Item>(new Item[] { item12, item8 });
             #endregion
             #region Orders
-            Order order1 = new Order(toOrder1, address1, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Complete);
-            Order order2 = new Order(toOrder2, address2, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.New);
-            Order order3 = new Order(toOrder3, address3, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Canceled);
-            Order order4 = new Order(toOrder4, address4, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Canceled);
-            Order order5 = new Order(toOrder5, address5, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Processing);
-            Order order6 = new Order(toOrder6, address6, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Complete);
-            Order order7 = new Order(toOrder7, address7, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Processing);
-            Order order8 = new Order(toOrder8, address8, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Canceled);
-            Order order9 = new Order(toOrder9, address9, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Complete);
-            Order order10 = new Order(toOrder10, address10, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Complete);
-            Order order11 = new Order(toOrder11, address11, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Canceled);
-            Order order12 = new Order(toOrder12, address12, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Canceled);
-            Order order13 = new Order(toOrder13, address11, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Canceled);
-            Order order14 = new Order(toOrder14, address10, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Canceled);
-            Order order15 = new Order(toOrder15, address9, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Complete);
-            Order order16 = new Order(toOrder16, address8, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Complete);
-            Order order17 = new Order(toOrder17, address7, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Complete);
-            Order order18 = new Order(toOrder18, address6, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Complete);
-            Order order19 = new Order(toOrder19, address5, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Complete);
-            Order order20 = new Order(toOrder20, address4, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Closed);
-            Order order21 = new Order(toOrder21, address3, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Closed);
-            Order order22 = new Order(toOrder22, address2, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Closed);
-            Order order23 = new Order(toOrder23, address1, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.ToString(dateTimeFormat), OrderType.Closed);
+            Order order1 = new Order(toOrder1, address1, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(2).ToString(deliveryDateTimeFormat), OrderType.Complete);
+            Order order2 = new Order(toOrder2, address2, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(4).ToString(deliveryDateTimeFormat), OrderType.New);
+            Order order3 = new Order(toOrder3, address3, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(5).ToString(deliveryDateTimeFormat), OrderType.Canceled);
+            Order order4 = new Order(toOrder4, address4, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(2).ToString(deliveryDateTimeFormat), OrderType.Canceled);
+            Order order5 = new Order(toOrder5, address5, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(3).ToString(deliveryDateTimeFormat), OrderType.Processing);
+            Order order6 = new Order(toOrder6, address6, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(1).ToString(deliveryDateTimeFormat), OrderType.Complete);
+            Order order7 = new Order(toOrder7, address7, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(6).ToString(deliveryDateTimeFormat), OrderType.Processing);
+            Order order8 = new Order(toOrder8, address8, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(4).ToString(deliveryDateTimeFormat), OrderType.Canceled);
+            Order order9 = new Order(toOrder9, address9, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(2).ToString(deliveryDateTimeFormat), OrderType.Complete);
+            Order order10 = new Order(toOrder10, address10, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(5).ToString(deliveryDateTimeFormat), OrderType.Complete);
+            Order order11 = new Order(toOrder11, address11, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(10).ToString(deliveryDateTimeFormat), OrderType.Canceled);
+            Order order12 = new Order(toOrder12, address12, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(11).ToString(deliveryDateTimeFormat), OrderType.Canceled);
+            Order order13 = new Order(toOrder13, address11, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(12).ToString(deliveryDateTimeFormat), OrderType.Canceled);
+            Order order14 = new Order(toOrder14, address10, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(16).ToString(deliveryDateTimeFormat), OrderType.Canceled);
+            Order order15 = new Order(toOrder15, address9, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(2).ToString(deliveryDateTimeFormat), OrderType.Complete);
+            Order order16 = new Order(toOrder16, address8, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(4).ToString(deliveryDateTimeFormat), OrderType.Complete);
+            Order order17 = new Order(toOrder17, address7, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(1).ToString(deliveryDateTimeFormat), OrderType.Complete);
+            Order order18 = new Order(toOrder18, address6, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(2).ToString(deliveryDateTimeFormat), OrderType.Complete);
+            Order order19 = new Order(toOrder19, address5, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(3).ToString(deliveryDateTimeFormat), OrderType.Complete);
+            Order order20 = new Order(toOrder20, address4, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(6).ToString(deliveryDateTimeFormat), OrderType.Closed);
+            Order order21 = new Order(toOrder21, address3, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(7).ToString(deliveryDateTimeFormat), OrderType.Closed);
+            Order order22 = new Order(toOrder22, address2, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(2).ToString(deliveryDateTimeFormat), OrderType.Closed);
+            Order order23 = new Order(toOrder23, address1, DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(9).ToString(deliveryDateTimeFormat), OrderType.Closed);
             #endregion
             List<Order> orders = new List<Order>(new Order[] { order1, order2, order3, order4, order5, order6, order7, order8, order9, order10,
             order11, order12, order13, order14, order15, order16, order17, order18, order19, order20, order21, order22, order23});

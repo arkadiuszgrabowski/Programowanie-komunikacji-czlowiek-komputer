@@ -23,8 +23,10 @@ namespace Logic
             //using (XmlWriter writer = XmlWriter.Create(fileName, settings))
             //    serializer.WriteObject(writer, objectToSerialize);
             XmlSerializer serializer = new XmlSerializer(typeof(List<Order>));
+            XmlSerializerNamespaces ns = new XmlSerializerNamespaces(
+                         new[] { XmlQualifiedName.Empty });
             TextWriter writer = new StreamWriter(fileName);
-            serializer.Serialize(writer, objectToSerialize);
+            serializer.Serialize(writer, objectToSerialize, ns);
             writer.Close();
         }
     }
