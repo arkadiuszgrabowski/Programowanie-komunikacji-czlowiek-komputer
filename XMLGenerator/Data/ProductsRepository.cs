@@ -1,21 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Data
 {
-    class ProductsRepository
+    public class ProductsRepository
     {
-        public List<Product> Products { get; set; }
-        public void Add(Product product)
+        private static List<Product> Products = new List<Product>();
+        public static void Add(Product product)
         {
             Products.Add(product);
         }
-        public Product GetProduct(Guid guid)
+        public static Product GetProduct(Guid guid)
         {
-            return
+            foreach(Product product in Products)
+            {
+                if(product.Id == guid)
+                {
+                    return product;
+                }
+            }
+            return null;
+        }
+        public static List<Product> GetAll()
+        {
+            return Products;
         }
     }
 

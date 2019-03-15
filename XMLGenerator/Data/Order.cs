@@ -26,12 +26,11 @@ namespace Data
             EstimatedDelivery = estimatedDelivery;
             Type = type;
             double x = 0;
-            //foreach(Item item in content)
-            //{
-            //    x += item.Product.Price * item.Quantity;
-            //};
-            //Price = Math.Round(x,2);
-            Price = 99;
+            foreach (Item item in content)
+            {
+                x += ProductsRepository.GetProduct(item.ProductID).Price * item.Quantity;
+            };
+            Price = Math.Round(x, 2);
         }
         [XmlAttribute]
         public Guid Id { get; set; }

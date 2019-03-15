@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class XMLTests
     {
         [TestMethod]
         public void GeneraterXml()
@@ -41,6 +41,18 @@ namespace Tests
             Product product10 = new Product("Iphone Xs", 10099.99);
             Product product11 = new Product("Pad Xbox 360", 120.99);
             Product product12 = new Product("Myszka Lenovo", 9.99);
+            ProductsRepository.Add(product1);
+            ProductsRepository.Add(product2);
+            ProductsRepository.Add(product3);
+            ProductsRepository.Add(product4);
+            ProductsRepository.Add(product5);
+            ProductsRepository.Add(product6);
+            ProductsRepository.Add(product7);
+            ProductsRepository.Add(product8);
+            ProductsRepository.Add(product9);
+            ProductsRepository.Add(product10);
+            ProductsRepository.Add(product11);
+            ProductsRepository.Add(product12);
             #endregion
             #region Items
             Item item1 = new Item(product1, 1);

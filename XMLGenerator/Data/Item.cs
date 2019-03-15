@@ -18,7 +18,8 @@ namespace Data
             ProductID = product.Id;
         }
 
-        public int Quantity { get; set; }
         public Guid ProductID { get; set; }
+        public int Quantity { get; set; }
+
     }
 }
