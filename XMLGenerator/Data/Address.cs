@@ -8,7 +8,6 @@ using System.Xml.Serialization;
 
 namespace Data
 {
-    
     public class Address
     {
         public Address()
@@ -26,7 +25,7 @@ namespace Data
         public string City { get; set; }
         public string Street { get; set; }
         public string Property { get; set; }
-        [XmlAttribute]
+        
         public string ZipCode { get; set; }
     }
 }

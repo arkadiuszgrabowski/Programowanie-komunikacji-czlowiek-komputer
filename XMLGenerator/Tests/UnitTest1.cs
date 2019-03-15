@@ -28,19 +28,33 @@ namespace Tests
             Address address11 = new Address("Łódź", "Łęczycka", "65/11", "93-193");
             Address address12 = new Address("Wrocław", "Jagiellońska", "63", "51-218");
             #endregion
+            #region Products
+            Product product1 = new Product("Śrubka 2x3mm", 10.50);
+            Product product2 = new Product("Monitor Asus 24 cale", 1299.99);
+            Product product3 = new Product("Karta graficzna GeForce RTX 2080Ti", 4699.99);
+            Product product4 = new Product("Klawiatura Roccat MK Ryos", 359.90);
+            Product product5 = new Product("Macbook Air 2018", 4999.99);
+            Product product6 = new Product("Lenovo Y520", 3599.49);
+            Product product7 = new Product("Xiaomi Redmi 4X", 5000.99);
+            Product product8 = new Product("Lg G7 Thinq", 4999.99);
+            Product product9 = new Product("Windows 10 Pro", 789.99);
+            Product product10 = new Product("Iphone Xs", 10099.99);
+            Product product11 = new Product("Pad Xbox 360", 120.99);
+            Product product12 = new Product("Myszka Lenovo", 9.99);
+            #endregion
             #region Items
-            Item item1 = new Item("Śrubka 2x3mm", 5, 10.50);
-            Item item2 = new Item("Monitor Asus 24 cale", 1, 1299.99);
-            Item item3 = new Item("Karta graficzna GeForce RTX 2080Ti", 2, 4699.99);
-            Item item4 = new Item("Klawiatura Roccat MK Ryos", 1, 359.90);
-            Item item5 = new Item("Macbook Air 2018", 1, 4999.99);
-            Item item6 = new Item("Lenovo Y520", 1, 3599.49);
-            Item item7 = new Item("Xiaomi Redmi 4X", 10, 5000.99);
-            Item item8 = new Item("Lg G7 Thinq", 3, 4999.99);
-            Item item9 = new Item("Windows 10 Pro", 1, 789.99);
-            Item item10 = new Item("Iphone Xs", 2, 10099.99);
-            Item item11 = new Item("Pad Xbox 360", 1, 120.99);
-            Item item12 = new Item("Myszka Lenovo", 1, 9.99);
+            Item item1 = new Item(product1, 1);
+            Item item2 = new Item(product2, 2);
+            Item item3 = new Item(product3, 3);
+            Item item4 = new Item(product4, 5);
+            Item item5 = new Item(product5, 6);
+            Item item6 = new Item(product6, 1);
+            Item item7 = new Item(product7, 2);
+            Item item8 = new Item(product8, 3);
+            Item item9 = new Item(product9, 1);
+            Item item10 = new Item(product10, 6);
+            Item item11 = new Item(product11, 10);
+            Item item12 = new Item(product12, 1);
             #endregion
             #region ListOfItems 
             List<Item> toOrder1 = new List<Item>(new Item[] { item2, item4, item7 });
