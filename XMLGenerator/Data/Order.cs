@@ -19,7 +19,7 @@ namespace Data
 
         public Order(List<Item> content, Address address, string sendingDateTime, string estimatedDelivery, OrderType type)
         {
-            Id = Guid.NewGuid();
+            OrderId = Guid.NewGuid();
             Items = content;
             Address = address; 
             SendingDateTime = sendingDateTime;
@@ -28,12 +28,12 @@ namespace Data
             double x = 0;
             foreach (Item item in content)
             {
-                x += ProductsRepository.GetProduct(item.ProductID).Price * item.Quantity;
+                x += ProductsRepository.GetProduct(item.ProductID).ProductPrice * item.Quantity;
             };
-            Price = Math.Round(x, 2);
+            OrderPrice = Math.Round(x, 2);
         }
         [XmlAttribute]
-        public Guid Id { get; set; }
+        public Guid OrderId { get; set; }
         [XmlArrayItem("Item")]
         public List<Item> Items { get; set; }
         [XmlElement]
@@ -42,6 +42,6 @@ namespace Data
         public string EstimatedDelivery { get; set; }
         [XmlAttribute("OrderType")]
         public OrderType Type { get; set; }
-        public double Price { get; set; }
+        public double OrderPrice { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace Data
         public Item(Product product, int quantity)
         {
             Quantity = quantity;
-            ProductID = product.Id;
+            ProductID = product.ProductId;
         }
 
         public Guid ProductID { get; set; }

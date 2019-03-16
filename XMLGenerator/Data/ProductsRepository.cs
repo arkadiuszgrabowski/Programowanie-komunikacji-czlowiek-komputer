@@ -14,7 +14,7 @@ namespace Data
         {
             foreach(Product product in Products)
             {
-                if(product.Id == guid)
+                if(product.ProductId == guid)
                 {
                     return product;
                 }
