@@ -1,28 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace Data
 {
-    public class Product
+    public class Author
     {
-        public Product()
+        public Author()
         {
         }
 
-        public Product(string name, double price)
+        public Author(string forename, string name, string id)
         {
-            ProductId = Guid.NewGuid();
+            Forename = forename;
             Name = name;
-            ProductPrice = price;
+            AuthorId = id;
         }
         [XmlAttribute]
-        public Guid ProductId { get; set; }
+        public string Forename { get; set; }
+        [XmlAttribute]
         public string Name { get; set; }
-        public double ProductPrice { get; set; }
+        [XmlAttribute]
+        public string AuthorId { get; set; }
     }
 }

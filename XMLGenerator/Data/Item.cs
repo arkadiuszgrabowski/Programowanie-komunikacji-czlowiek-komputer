@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Data
 {
@@ -15,10 +16,10 @@ namespace Data
         public Item(Product product, int quantity)
         {
             Quantity = quantity;
-            ProductID = product.Id;
+            ProductId = product.ProductId;
         }
-
-        public Guid ProductID { get; set; }
+        [XmlAttribute]
+        public Guid ProductId { get; set; }
         public int Quantity { get; set; }
 
     }
