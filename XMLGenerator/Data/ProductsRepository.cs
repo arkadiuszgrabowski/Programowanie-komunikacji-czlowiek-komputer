@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Data
 {
@@ -10,11 +11,11 @@ namespace Data
         {
             Products.Add(product);
         }
-        public static Product GetProduct(Guid guid)
+        public static Product GetProduct(string guid)
         {
             foreach(Product product in Products)
             {
-                if(product.ProductId == guid)
+                if(string.Equals(product.ProductId, guid))
                 {
                     return product;
                 }

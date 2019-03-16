@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Company SYSTEM "dtd_zadanie1.dtd">
+<Company>
+  <Authors>
+    <Author Forename="Arkadiusz" Name="Grabowski" AuthorId="210191" />
+    <Author Forename="Kacper" Name="Prądzyński" AuthorId="210299" />
+  </Authors>
+  <ProductsRepository>
+    <Product ProductId="xc3f8b6e1-d559-4690-85e2-c4537b6c97af">
+      <Name>Śrubka 2x3mm</Name>
+      <ProductPrice>10.5</ProductPrice>
+    </Product>
+    <Product ProductId="xb63d4c0a-2d27-47db-820d-570eb3a12bc6">
+      <Name>Monitor Asus 24 cale</Name>
+      <ProductPrice>1299.99</ProductPrice>
+    </Product>
+    <Product ProductId="xab3c4009-b0e6-4226-a398-45267a62eb9e">
+      <Name>Karta graficzna GeForce RTX 2080Ti</Name>
+      <ProductPrice>4699.99</ProductPrice>
+    </Product>
+    <Product ProductId="x400edcf8-e461-478f-9f1d-9d205e9a2f6a">
+      <Name>Klawiatura Roccat MK Ryos</Name>
+      <ProductPrice>359.9</ProductPrice>
+    </Product>
+    <Product ProductId="x6fd72d84-3ca6-4cde-bf5c-2701e12ce01b">
+      <Name>Macbook Air 2018</Name>
+      <ProductPrice>4999.99</ProductPrice>
+    </Product>
+    <Product ProductId="x430f31d1-9e70-44b9-b9ff-afb45a8f7ed6">
+      <Name>Lenovo Y520</Name>
+      <ProductPrice>3599.49</ProductPrice>
+    </Product>
+    <Product ProductId="x2b55c6e5-60ad-46f6-96d0-73c077cb8d4d">
+      <Name>Xiaomi Redmi 4X</Name>
+      <ProductPrice>5000.99</ProductPrice>
+    </Product>
+    <Product ProductId="x6ae2acf5-69ed-49cc-a59a-7485980f6e92">
+      <Name>Lg G7 Thinq</Name>
+      <ProductPrice>4999.99</ProductPrice>
+    </Product>
+    <Product ProductId="x1fee4f0a-481a-4d4d-84e2-65f2d41e27bc">
+      <Name>Windows 10 Pro</Name>
+      <ProductPrice>789.99</ProductPrice>
+    </Product>
+    <Product ProductId="x40b4dbf3-b20e-4bc2-b14e-14e1f0bc10d6">
+      <Name>Iphone Xs</Name>
+      <ProductPrice>10099.99</ProductPrice>
+    </Product>
+    <Product ProductId="xc9d779a9-be03-422c-bcb2-39435bcf549c">
+      <Name>Pad Xbox 360</Name>
+      <ProductPrice>120.99</ProductPrice>
+    </Product>
+    <Product ProductId="x9aa9c06b-713b-4a1c-b2f9-8b2e0a91b54c">
+      <Name>Myszka Lenovo</Name>
+      <ProductPrice>9.99</ProductPrice>
+    </Product>
+  </ProductsRepository>
+  <Orders>
+    <Order OrderId="xf7b3d5f9-9921-4d77-92ca-cd2b7171c8d1" OrderType="Complete">
+      <Items>
+        <Item ProductId="xb63d4c0a-2d27-47db-820d-570eb3a12bc6">
+          <Quantity>2</Quantity>
+        </Item>
+        <Item ProductId="x400edcf8-e461-478f-9f1d-9d205e9a2f6a">
+          <Quantity>5</Quantity>
+        </Item>
+        <Item ProductId="x2b55c6e5-60ad-46f6-96d0-73c077cb8d4d">
+          <Quantity>2</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Łódź</City>
+        <Street>Politechniki</Street>
+        <Property>3a</Property>
+        <ZipCode>93-501</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-18</EstimatedDelivery>
+      <OrderPrice>14401.46</OrderPrice>
+    </Order>
+    <Order OrderId="x4c97091e-eba5-42cf-87d8-7c315237f399" OrderType="New">
+      <Items>
+        <Item ProductId="xc3f8b6e1-d559-4690-85e2-c4537b6c97af">
+          <Quantity>1</Quantity>
+        </Item>
+        <Item ProductId="x400edcf8-e461-478f-9f1d-9d205e9a2f6a">
+          <Quantity>5</Quantity>
+        </Item>
+        <Item ProductId="x1fee4f0a-481a-4d4d-84e2-65f2d41e27bc">
+          <Quantity>1</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Łęczyca</City>
+        <Street>Belwederska</Street>
+        <Property>79a</Property>
+        <ZipCode>99-100</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-20</EstimatedDelivery>
+      <OrderPrice>2599.99</OrderPrice>
+    </Order>
+    <Order OrderId="xe0d89dc0-b4f5-4187-8860-82bc056506ac" OrderType="Canceled">
+      <Items>
+        <Item ProductId="x400edcf8-e461-478f-9f1d-9d205e9a2f6a">
+          <Quantity>5</Quantity>
+        </Item>
+        <Item ProductId="x9aa9c06b-713b-4a1c-b2f9-8b2e0a91b54c">
+          <Quantity>1</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Szczecin</City>
+        <Street>Wąska 74</Street>
+        <Property>74</Property>
+        <ZipCode>71-407</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-21</EstimatedDelivery>
+      <OrderPrice>1809.49</OrderPrice>
+    </Order>
+    <Order OrderId="xb3428863-5f81-47f0-832e-12a64bad2ae0" OrderType="Canceled">
+      <Items>
+        <Item ProductId="x400edcf8-e461-478f-9f1d-9d205e9a2f6a">
+          <Quantity>5</Quantity>
+        </Item>
+        <Item ProductId="x9aa9c06b-713b-4a1c-b2f9-8b2e0a91b54c">
+          <Quantity>1</Quantity>
+        </Item>
+        <Item ProductId="x430f31d1-9e70-44b9-b9ff-afb45a8f7ed6">
+          <Quantity>1</Quantity>
+        </Item>
+        <Item ProductId="xc9d779a9-be03-422c-bcb2-39435bcf549c">
+          <Quantity>10</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Gdynia</City>
+        <Street>Sieroszewskiego Wacława</Street>
+        <Property>141</Property>
+        <ZipCode>81-376</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-18</EstimatedDelivery>
+      <OrderPrice>6618.88</OrderPrice>
+    </Order>
+    <Order OrderId="x82d47e0f-166a-43f6-ac41-dd95f879ea38" OrderType="Processing">
+      <Items>
+        <Item ProductId="xc3f8b6e1-d559-4690-85e2-c4537b6c97af">
+          <Quantity>1</Quantity>
+        </Item>
+        <Item ProductId="xb63d4c0a-2d27-47db-820d-570eb3a12bc6">
+          <Quantity>2</Quantity>
+        </Item>
+        <Item ProductId="xab3c4009-b0e6-4226-a398-45267a62eb9e">
+          <Quantity>3</Quantity>
+        </Item>
+        <Item ProductId="x400edcf8-e461-478f-9f1d-9d205e9a2f6a">
+          <Quantity>5</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Brzeg</City>
+        <Street>Kruszyńska</Street>
+        <Property>73</Property>
+        <ZipCode>49-300</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-19</EstimatedDelivery>
+      <OrderPrice>18509.95</OrderPrice>
+    </Order>
+    <Order OrderId="x555e7f1a-71c5-4330-86fa-34528f3fab4e" OrderType="Complete">
+      <Items>
+        <Item ProductId="x6fd72d84-3ca6-4cde-bf5c-2701e12ce01b">
+          <Quantity>6</Quantity>
+        </Item>
+        <Item ProductId="x430f31d1-9e70-44b9-b9ff-afb45a8f7ed6">
+          <Quantity>1</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Łódź</City>
+        <Street>Legionów</Street>
+        <Property>114</Property>
+        <ZipCode>91-072</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-17</EstimatedDelivery>
+      <OrderPrice>33599.43</OrderPrice>
+    </Order>
+    <Order OrderId="x086fce45-6b57-47e6-9726-adc7e220443e" OrderType="Processing">
+      <Items>
+        <Item ProductId="x6ae2acf5-69ed-49cc-a59a-7485980f6e92">
+          <Quantity>3</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Sopot</City>
+        <Street>Herberta Zbigniewa</Street>
+        <Property>109</Property>
+        <ZipCode>81-826</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-22</EstimatedDelivery>
+      <OrderPrice>14999.97</OrderPrice>
+    </Order>
+    <Order OrderId="x82a12e8d-70cf-48e5-b578-b3d3c8d07fc5" OrderType="Canceled">
+      <Items>
+        <Item ProductId="x1fee4f0a-481a-4d4d-84e2-65f2d41e27bc">
+          <Quantity>1</Quantity>
+        </Item>
+        <Item ProductId="x40b4dbf3-b20e-4bc2-b14e-14e1f0bc10d6">
+          <Quantity>6</Quantity>
+        </Item>
+        <Item ProductId="xc9d779a9-be03-422c-bcb2-39435bcf549c">
+          <Quantity>10</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Opole</City>
+        <Street>Kielecka</Street>
+        <Property>65/24</Property>
+        <ZipCode>45-401</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-20</EstimatedDelivery>
+      <OrderPrice>62599.83</OrderPrice>
+    </Order>
+    <Order OrderId="x7cc962cc-55e7-4de1-af7c-bd88143dfb57" OrderType="Complete">
+      <Items>
+        <Item ProductId="x9aa9c06b-713b-4a1c-b2f9-8b2e0a91b54c">
+          <Quantity>1</Quantity>
+        </Item>
+        <Item ProductId="xc9d779a9-be03-422c-bcb2-39435bcf549c">
+          <Quantity>10</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Warszawa</City>
+        <Street>Nowy Świat</Street>
+        <Property>133/67</Property>
+        <ZipCode>00-400</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-18</EstimatedDelivery>
+      <OrderPrice>1219.89</OrderPrice>
+    </Order>
+    <Order OrderId="xabda25be-3343-406e-9769-bb1c3515eda5" OrderType="Complete">
+      <Items>
+        <Item ProductId="x40b4dbf3-b20e-4bc2-b14e-14e1f0bc10d6">
+          <Quantity>6</Quantity>
+        </Item>
+        <Item ProductId="x1fee4f0a-481a-4d4d-84e2-65f2d41e27bc">
+          <Quantity>1</Quantity>
+        </Item>
+        <Item ProductId="x6ae2acf5-69ed-49cc-a59a-7485980f6e92">
+          <Quantity>3</Quantity>
+        </Item>
+        <Item ProductId="x2b55c6e5-60ad-46f6-96d0-73c077cb8d4d">
+          <Quantity>2</Quantity>
+        </Item>
+        <Item ProductId="x430f31d1-9e70-44b9-b9ff-afb45a8f7ed6">
+          <Quantity>1</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Białystok</City>
+        <Street>Zagórki</Street>
+        <Property>106</Property>
+        <ZipCode>15-587</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-21</EstimatedDelivery>
+      <OrderPrice>89991.37</OrderPrice>
+    </Order>
+    <Order OrderId="xe254a8c9-ceee-4b20-8e17-466cd73f9b18" OrderType="Canceled">
+      <Items>
+        <Item ProductId="x6fd72d84-3ca6-4cde-bf5c-2701e12ce01b">
+          <Quantity>6</Quantity>
+        </Item>
+        <Item ProductId="x400edcf8-e461-478f-9f1d-9d205e9a2f6a">
+          <Quantity>5</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Łódź</City>
+        <Street>Łęczycka</Street>
+        <Property>65/11</Property>
+        <ZipCode>93-193</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-26</EstimatedDelivery>
+      <OrderPrice>31799.44</OrderPrice>
+    </Order>
+    <Order OrderId="x1c335b9b-a129-461a-8b4f-d2d8e057120d" OrderType="Canceled">
+      <Items>
+        <Item ProductId="xab3c4009-b0e6-4226-a398-45267a62eb9e">
+          <Quantity>3</Quantity>
+        </Item>
+        <Item ProductId="xb63d4c0a-2d27-47db-820d-570eb3a12bc6">
+          <Quantity>2</Quantity>
+        </Item>
+        <Item ProductId="xc9d779a9-be03-422c-bcb2-39435bcf549c">
+          <Quantity>10</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Wrocław</City>
+        <Street>Jagiellońska</Street>
+        <Property>63</Property>
+        <ZipCode>51-218</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-27</EstimatedDelivery>
+      <OrderPrice>17909.85</OrderPrice>
+    </Order>
+    <Order OrderId="x0f4b3fb7-30d4-44cc-bd40-eee74adf16f2" OrderType="Canceled">
+      <Items>
+        <Item ProductId="xb63d4c0a-2d27-47db-820d-570eb3a12bc6">
+          <Quantity>2</Quantity>
+        </Item>
+        <Item ProductId="x430f31d1-9e70-44b9-b9ff-afb45a8f7ed6">
+          <Quantity>1</Quantity>
+        </Item>
+        <Item ProductId="xc9d779a9-be03-422c-bcb2-39435bcf549c">
+          <Quantity>10</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Łódź</City>
+        <Street>Łęczycka</Street>
+        <Property>65/11</Property>
+        <ZipCode>93-193</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-28</EstimatedDelivery>
+      <OrderPrice>7409.37</OrderPrice>
+    </Order>
+    <Order OrderId="xf26cbf9e-101a-4480-aadf-3b4fa4a1e788" OrderType="Canceled">
+      <Items>
+        <Item ProductId="x40b4dbf3-b20e-4bc2-b14e-14e1f0bc10d6">
+          <Quantity>6</Quantity>
+        </Item>
+        <Item ProductId="x430f31d1-9e70-44b9-b9ff-afb45a8f7ed6">
+          <Quantity>1</Quantity>
+        </Item>
+        <Item ProductId="xc9d779a9-be03-422c-bcb2-39435bcf549c">
+          <Quantity>10</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Białystok</City>
+        <Street>Zagórki</Street>
+        <Property>106</Property>
+        <ZipCode>15-587</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-04-01</EstimatedDelivery>
+      <OrderPrice>65409.33</OrderPrice>
+    </Order>
+    <Order OrderId="x20e5b879-c2d7-4e4d-b897-2546db0f1dd4" OrderType="Complete">
+      <Items>
+        <Item ProductId="x40b4dbf3-b20e-4bc2-b14e-14e1f0bc10d6">
+          <Quantity>6</Quantity>
+        </Item>
+        <Item ProductId="x430f31d1-9e70-44b9-b9ff-afb45a8f7ed6">
+          <Quantity>1</Quantity>
+        </Item>
+        <Item ProductId="x6fd72d84-3ca6-4cde-bf5c-2701e12ce01b">
+          <Quantity>6</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Warszawa</City>
+        <Street>Nowy Świat</Street>
+        <Property>133/67</Property>
+        <ZipCode>00-400</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-18</EstimatedDelivery>
+      <OrderPrice>94199.37</OrderPrice>
+    </Order>
+    <Order OrderId="x50e0a09a-cfc9-44c4-8d36-819f6dda50a1" OrderType="Complete">
+      <Items>
+        <Item ProductId="x40b4dbf3-b20e-4bc2-b14e-14e1f0bc10d6">
+          <Quantity>6</Quantity>
+        </Item>
+        <Item ProductId="x430f31d1-9e70-44b9-b9ff-afb45a8f7ed6">
+          <Quantity>1</Quantity>
+        </Item>
+        <Item ProductId="x6fd72d84-3ca6-4cde-bf5c-2701e12ce01b">
+          <Quantity>6</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Opole</City>
+        <Street>Kielecka</Street>
+        <Property>65/24</Property>
+        <ZipCode>45-401</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-20</EstimatedDelivery>
+      <OrderPrice>94199.37</OrderPrice>
+    </Order>
+    <Order OrderId="xbe7650d7-b3d4-4d4f-ab23-f72ffbc6ac3b" OrderType="Complete">
+      <Items>
+        <Item ProductId="xb63d4c0a-2d27-47db-820d-570eb3a12bc6">
+          <Quantity>2</Quantity>
+        </Item>
+        <Item ProductId="x6ae2acf5-69ed-49cc-a59a-7485980f6e92">
+          <Quantity>3</Quantity>
+        </Item>
+        <Item ProductId="x6fd72d84-3ca6-4cde-bf5c-2701e12ce01b">
+          <Quantity>6</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Sopot</City>
+        <Street>Herberta Zbigniewa</Street>
+        <Property>109</Property>
+        <ZipCode>81-826</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-17</EstimatedDelivery>
+      <OrderPrice>47599.89</OrderPrice>
+    </Order>
+    <Order OrderId="x9a01bc36-f41d-4cf2-9fb0-bf5408a8098a" OrderType="Complete">
+      <Items>
+        <Item ProductId="x2b55c6e5-60ad-46f6-96d0-73c077cb8d4d">
+          <Quantity>2</Quantity>
+        </Item>
+        <Item ProductId="x400edcf8-e461-478f-9f1d-9d205e9a2f6a">
+          <Quantity>5</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Łódź</City>
+        <Street>Legionów</Street>
+        <Property>114</Property>
+        <ZipCode>91-072</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-18</EstimatedDelivery>
+      <OrderPrice>11801.48</OrderPrice>
+    </Order>
+    <Order OrderId="x98e7fe09-45c5-456c-9ea6-cb7a7885bcdd" OrderType="Complete">
+      <Items>
+        <Item ProductId="x2b55c6e5-60ad-46f6-96d0-73c077cb8d4d">
+          <Quantity>2</Quantity>
+        </Item>
+        <Item ProductId="x6ae2acf5-69ed-49cc-a59a-7485980f6e92">
+          <Quantity>3</Quantity>
+        </Item>
+        <Item ProductId="x400edcf8-e461-478f-9f1d-9d205e9a2f6a">
+          <Quantity>5</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Brzeg</City>
+        <Street>Kruszyńska</Street>
+        <Property>73</Property>
+        <ZipCode>49-300</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-19</EstimatedDelivery>
+      <OrderPrice>26801.45</OrderPrice>
+    </Order>
+    <Order OrderId="x5004baa5-0108-4d54-a4ba-ae4594d3dca4" OrderType="Closed">
+      <Items>
+        <Item ProductId="x2b55c6e5-60ad-46f6-96d0-73c077cb8d4d">
+          <Quantity>2</Quantity>
+        </Item>
+        <Item ProductId="x6ae2acf5-69ed-49cc-a59a-7485980f6e92">
+          <Quantity>3</Quantity>
+        </Item>
+        <Item ProductId="x400edcf8-e461-478f-9f1d-9d205e9a2f6a">
+          <Quantity>5</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Gdynia</City>
+        <Street>Sieroszewskiego Wacława</Street>
+        <Property>141</Property>
+        <ZipCode>81-376</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-22</EstimatedDelivery>
+      <OrderPrice>26801.45</OrderPrice>
+    </Order>
+    <Order OrderId="x3aeab9be-933d-41c0-b0cf-cd7f469e9524" OrderType="Closed">
+      <Items>
+        <Item ProductId="x2b55c6e5-60ad-46f6-96d0-73c077cb8d4d">
+          <Quantity>2</Quantity>
+        </Item>
+        <Item ProductId="x6ae2acf5-69ed-49cc-a59a-7485980f6e92">
+          <Quantity>3</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Szczecin</City>
+        <Street>Wąska 74</Street>
+        <Property>74</Property>
+        <ZipCode>71-407</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-23</EstimatedDelivery>
+      <OrderPrice>25001.95</OrderPrice>
+    </Order>
+    <Order OrderId="x650c6c74-1cf9-481c-bad1-6f29de9c339d" OrderType="Closed">
+      <Items>
+        <Item ProductId="xb63d4c0a-2d27-47db-820d-570eb3a12bc6">
+          <Quantity>2</Quantity>
+        </Item>
+        <Item ProductId="x9aa9c06b-713b-4a1c-b2f9-8b2e0a91b54c">
+          <Quantity>1</Quantity>
+        </Item>
+        <Item ProductId="x6ae2acf5-69ed-49cc-a59a-7485980f6e92">
+          <Quantity>3</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Łęczyca</City>
+        <Street>Belwederska</Street>
+        <Property>79a</Property>
+        <ZipCode>99-100</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-18</EstimatedDelivery>
+      <OrderPrice>17609.94</OrderPrice>
+    </Order>
+    <Order OrderId="x16bd0581-0bf4-46fa-b7f0-02ab9ad37921" OrderType="Closed">
+      <Items>
+        <Item ProductId="x9aa9c06b-713b-4a1c-b2f9-8b2e0a91b54c">
+          <Quantity>1</Quantity>
+        </Item>
+        <Item ProductId="x6ae2acf5-69ed-49cc-a59a-7485980f6e92">
+          <Quantity>3</Quantity>
+        </Item>
+      </Items>
+      <Address>
+        <City>Łódź</City>
+        <Street>Politechniki</Street>
+        <Property>3a</Property>
+        <ZipCode>93-501</ZipCode>
+      </Address>
+      <SendingDateTime>2019-03-16 21:07:16</SendingDateTime>
+      <EstimatedDelivery>2019-03-25</EstimatedDelivery>
+      <OrderPrice>15009.96</OrderPrice>
+    </Order>
+  </Orders>
+</Company>
