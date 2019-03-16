@@ -14,6 +14,9 @@ namespace Tests
         {
             string dateTimeFormat = "yyyy-MM-dd H:mm:ss";
             string deliveryDateTimeFormat = "yyyy-MM-dd";
+            Author arek = new Author("Arkadiusz", "Grabowski", "210191");
+            Author kacper = new Author("Kacper", "Prądzyński", "210299");
+            List<Author> authors = new List<Author>(new Author[]{ arek, kacper });
             #region Addresses
             Address address1 = new Address("Łódź", "Politechniki", "3a", "93-501");
             Address address2 = new Address("Łęczyca", "Belwederska", "79a", "99-100");
@@ -120,7 +123,7 @@ namespace Tests
             #endregion
             List<Order> orders = new List<Order>(new Order[] { order1, order2, order3, order4, order5, order6, order7, order8, order9, order10,
             order11, order12, order13, order14, order15, order16, order17, order18, order19, order20, order21, order22, order23});
-            Company company = new Company(orders, ProductsRepository.GetAll());
+            Company company = new Company(orders, ProductsRepository.GetAll(), authors);
             XmlSerialization.Serialize(company, "zadanie1.xml");
         }
     }

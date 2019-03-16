@@ -13,14 +13,18 @@ namespace Data
         {
         }
 
-        public Company(List<Order> orders, List<Product> products)
+        public Company(List<Order> orders, List<Product> products, List<Author> authors)
         {
             Orders = orders;
             ProductsRepository = products;
+            Authors = authors;
         }
-        [XmlArrayItem("Order")]
-        public List<Order> Orders { get; set; }
+        [XmlArrayItem("Author")]
+        public List<Author> Authors { get; set; }
         [XmlArrayItem("Product")]
         public List<Product> ProductsRepository { get; set; }
+        [XmlArrayItem("Order")]
+        public List<Order> Orders { get; set; }
+       
     }
 }
