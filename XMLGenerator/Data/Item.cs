@@ -16,10 +16,10 @@ namespace Data
         public Item(Product product, int quantity)
         {
             Quantity = quantity;
-            ProductID = product.ProductId;
+            ProductId = product.ProductId;
         }
         [XmlAttribute]
-        public Guid ProductID { get; set; }
+        public Guid ProductId { get; set; }
         public int Quantity { get; set; }
 
     }

@@ -28,7 +28,7 @@ namespace Data
             double x = 0;
             foreach (Item item in content)
             {
-                x += ProductsRepository.GetProduct(item.ProductID).ProductPrice * item.Quantity;
+                x += ProductsRepository.GetProduct(item.ProductId).ProductPrice * item.Quantity;
             };
             OrderPrice = Math.Round(x, 2);
         }
