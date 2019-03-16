@@ -16,12 +16,12 @@ namespace Data
 
         public Product(string name, double price)
         {
-            ProductId = Guid.NewGuid();
+            ProductId = "x" + Guid.NewGuid().ToString();
             Name = name;
             ProductPrice = price;
         }
         [XmlAttribute]
-        public Guid ProductId { get; set; }
+        public string ProductId { get; set; }
         public string Name { get; set; }
         public double ProductPrice { get; set; }
     }

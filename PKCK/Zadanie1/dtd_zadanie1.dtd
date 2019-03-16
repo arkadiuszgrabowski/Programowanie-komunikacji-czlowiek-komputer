@@ -1,0 +1,28 @@
+<!ENTITY % TypeOfOrder "(New|Processing|Complete|Closed|Canceled)"> 
+<!ELEMENT Company (Authors, ProductsRepository, Orders)>
+
+<!ELEMENT Authors (Author+)>
+<!ELEMENT Author EMPTY>
+<!ATTLIST Author Forename CDATA #REQUIRED Name CDATA #REQUIRED AuthorId CDATA #REQUIRED>
+
+<!ELEMENT ProductsRepository (Product+)>
+<!ELEMENT Product (Name, ProductPrice)>
+<!ATTLIST Product ProductId ID #REQUIRED>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT ProductPrice (#PCDATA)>
+
+<!ELEMENT Orders (Order+)>
+<!ELEMENT Order (Items, Address, SendingDateTime, EstimatedDelivery, OrderPrice)>
+<!ATTLIST Order OrderId ID #REQUIRED OrderType CDATA #REQUIRED>
+<!ELEMENT Items (Item+)>
+<!ELEMENT Item (Quantity)>
+<!ATTLIST Item ProductId IDREF #REQUIRED>
+<!ELEMENT Quantity (#PCDATA)>
+<!ELEMENT Address (City, Street, Property, ZipCode)>
+<!ELEMENT City (#PCDATA)>
+<!ELEMENT Street (#PCDATA)>
+<!ELEMENT Property (#PCDATA)>
+<!ELEMENT ZipCode (#PCDATA)>
+<!ELEMENT SendingDateTime (#PCDATA)>
+<!ELEMENT EstimatedDelivery (#PCDATA)>
+<!ELEMENT OrderPrice (#PCDATA)>

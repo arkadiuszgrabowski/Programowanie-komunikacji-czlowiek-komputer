@@ -19,7 +19,7 @@ namespace Data
 
         public Order(List<Item> content, Address address, string sendingDateTime, string estimatedDelivery, OrderType type)
         {
-            OrderId = Guid.NewGuid();
+            OrderId = "x" + Guid.NewGuid().ToString();
             Items = content;
             Address = address; 
             SendingDateTime = sendingDateTime;
@@ -33,7 +33,7 @@ namespace Data
             OrderPrice = Math.Round(x, 2);
         }
         [XmlAttribute]
-        public Guid OrderId { get; set; }
+        public string OrderId { get; set; }
         [XmlArrayItem("Item")]
         public List<Item> Items { get; set; }
         [XmlElement]
