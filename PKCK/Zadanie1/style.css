@@ -180,14 +180,33 @@ Order:hover {
 }
 
 Items::before {
+  display: block;
+  text-align: center;
+  background-color: aqua;
+  font-weight: bold;
   content: "Lista produktów:";
 }
 
 Items {
   margin-top: 10px;
-  text-align: center;
   display: block;
   width: 100%;
+  counter-reset: counter;
+}
+
+Item::before {
+  counter-increment: counter;
+  content: counter(counter) ". " attr(ProductId);
+}
+
+Quantity::before {
+  content: "Sztuk: "; 
+}
+
+Quantity {
+  right: 15px;
+  position:absolute;
+  font-weight: bold;
 }
 
 Item {
