@@ -1,0 +1,147 @@
+﻿Company {
+  background-image: url("background.png");
+}
+
+Authors::before{
+  content: "Autorzy:";
+}
+
+Authors{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-around;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0px 5px 20px #000000;
+  padding: 5px;
+  width: 100%;
+  z-index: 10;
+}
+
+Author::before{
+  content: attr(Forename) " " attr(Name) " " attr(AuthorId);
+}
+
+Author{
+  display: block;
+  background-color: rgb(177, 246, 203);
+  font-weight: bold;
+}
+
+ProductsRepository::before{
+  display: block;
+  position: absolute;
+  content: "Produkty";
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 20px;
+  background-color: black;
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  text-shadow:0px 0px 5px #ffffff;
+  border-radius: 50%;
+  color: white;
+}
+
+ProductsRepository {
+  padding: 0;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+Product {
+  background-color: rgb(255, 255, 255, 0.4);
+  transition: linear 0.3s;
+  cursor: default;
+  margin: 100px 50px 0px 50px;
+  padding: 10px;
+  width: 180px;
+  height: 130px;
+  min-width: 180px;
+  max-width: 180px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 5px rgb(6, 47, 65);
+  position:relative;
+}
+
+Product ProductPrice {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  position:absolute;
+  bottom: 20px;
+  transition: linear 0.3s;
+}
+
+Product ProductPrice:after {
+  content: " PLN";
+}
+
+Product Name{
+  text-align: center;
+  font-size: 22px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: block;
+  width: 100%;
+}
+
+Product:hover {
+  background-color: rgb(255, 255, 255, 0.9);
+}
+
+Product:hover ProductPrice{
+  transform: translateY(-10px);
+  font-size: 24px;
+}
+
+Orders::before{
+  display: block;
+  position: absolute;
+  content: "Zamówienia";
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 20px;
+  background-color: black;
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  text-shadow:0px 0px 5px #ffffff;
+  border-radius: 50%;
+  color: white;
+}
+
+Orders {
+  padding: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+Order {
+  background-color: rgb(255, 255, 255, 0.4);
+  transition: linear 0.3s;
+  cursor: default;
+  margin: 100px 50px 0px 50px;
+  padding: 10px;
+  width: 380px;
+  height: 130px;
+  min-width: 380px;
+  max-width: 180px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 5px rgb(6, 47, 65);
+  position:relative;
+}
