@@ -49,7 +49,7 @@ ProductsRepository::before{
 
 ProductsRepository {
   padding: 0;
-  margin-top: 50px;
+  margin-top: 100px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -136,7 +136,7 @@ Orders::before{
 
 Orders {
   padding: 0;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 50px;
   display: flex;
   flex-direction: row;
@@ -162,7 +162,7 @@ Order {
   background-color: rgb(255, 255, 255, 0.4);
   transition: linear 0.3s;
   cursor: default;
-  margin: 100px 50px 0px 50px;
+  margin: 100px 25px 0px 25px;
   padding: 10px;
   width: 380px;
   min-height: 130px;
@@ -182,16 +182,28 @@ Order:hover {
 Items::before {
   display: block;
   text-align: center;
-  background-color: aqua;
   font-weight: bold;
   content: "Lista produktów:";
 }
 
 Items {
+  overflow: hidden;
+  max-height:0;
+  opacity: 0;
+  transition: max-height 2s, opacity 1s 0.3s; 
   margin-top: 10px;
   display: block;
   width: 100%;
   counter-reset: counter;
+  background-color: #e62739;
+  border-radius: 5px;
+}
+
+Order:hover Items{
+  overflow:hidden;
+  opacity: 1;
+  height:auto;
+  max-height:600px; 
 }
 
 Item::before {
@@ -204,25 +216,31 @@ Quantity::before {
 }
 
 Quantity {
-  right: 15px;
+  right: 20px;
   position:absolute;
   font-weight: bold;
 }
 
 Item {
-  border-radius: 5px;
-  margin-top: 2px;
+  border-radius: 2px;
+  padding: 2px 0 2px 4px;
+  margin: 4px;
   display: block;
-  background-color: pink;
+  background-color: lightgray;
 }
 
 Address {
+  padding: 10px 0 10px 0;
+  border-radius: 5px;
   margin-top: 10px;
+  margin-bottom: 5px;
   text-align: center;
   display: flex;
   width: 100%;
   justify-content: center;
-  background-color: yellow;
+  background-color: #22264b;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 City {
@@ -253,9 +271,13 @@ SendingDateTime::before {
 }
 
 SendingDateTime {
+  padding: 10px 0 10px 0;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   text-align: center;
   display: block;
-  background-color: green;
+  background-color: #c2d4d8;
 }
 
 EstimatedDelivery::before {
@@ -263,10 +285,14 @@ EstimatedDelivery::before {
 }
 
 EstimatedDelivery {
+  padding: 10px 0 10px 0;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   text-align: center;
   justify-content: space-between;
   display: block;
-  background-color: blue;
+  background-color: #b0aac2;
 }
 
 OrderPrice::after {
@@ -274,6 +300,17 @@ OrderPrice::after {
 }
 
 OrderPrice {
+  transition: linear 0.3s;
+  padding: 10px 0 10px 0;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
   text-align: center;
-  background-color: red;
+  background-color: #e62739;
+  font-size: 20px;
+}
+
+Order:hover OrderPrice {
+  font-size: 36px;
 }
