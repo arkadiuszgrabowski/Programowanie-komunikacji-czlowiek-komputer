@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://zadanie2.pl/typyproste" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://zadanie2.pl/typyproste">
+
+    <xs:simpleType name="NameType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="30"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="AuthorIdType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:totalDigits value="6">
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="IdType">
+        <xs:restriction base="xs:ID">
+            <xs:patter value="x\w{9}-\w{4}-\w{4}-\w{4}-\w{12}">
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PriceType">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.01">
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="OrderTypeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="New"/>
+            <xs:enumeration value="Processing"/>
+            <xs:enumeration value="Complete"/>
+            <xs:enumeration value="Closed"/>
+            <xs:enumeration value="Canceled"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="QuantityType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:totalDigits value="3">
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ZipCodeType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{2}-\d{3}">
+            </xs:restriction>
+        </xs:simpleType>
+
+    <xs:simpleType name="AddressType">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="preserve"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
