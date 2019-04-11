@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:zam="zam"
+targetNamespace="zam" elementFormDefault="qualified">
+
+    <xs:group name="AddressGroup">
+        <xs:sequence>
+            <xs:element name="City" type="xs:string" />
+            <xs:element name="Street">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:whiteSpace value="preserve" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Property" type="xs:string" />
+            <xs:element name="ZipCode">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="\d{2}-\d{3}" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:complexType name="Address">
+        <xs:sequence>
+            <xs:group ref="zam:AddressGroup"></xs:group>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Author">
+            <xs:attribute name="Forename" type="xs:string"/>
+            <xs:attribute name="Name" type="xs:string"/>
+            <xs:attribute name="AuthorId">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:totalDigits value="6" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="Product">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string" />
+            <xs:element name="ProductPrice">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                    <xs:minInclusive value="0.01" />
+                </xs:restriction>
+            </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="ProductId" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="x\w{8}-\w{4}-\w{4}-\w{4}-\w{12}"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="Item">
+        <xs:sequence>
+            <xs:element name="Quantity">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:totalDigits value="3" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="ProductId" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="Order">
+        <xs:sequence>
+            <xs:element name="Items">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Item" type="zam:Item" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="Address" type="zam:Address"/>
+            <xs:element name="SendingDateTime" type="xs:dateTime"></xs:element>
+            <xs:element name="EstimatedDelivery" type="xs:date"></xs:element>
+            <xs:element name="OrderPrice">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="0.01" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="OrderId" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="x\w{8}-\w{4}-\w{4}-\w{4}-\w{12}"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="OrderType">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="New" />
+                    <xs:enumeration value="Processing" />
+                    <xs:enumeration value="Complete" />
+                    <xs:enumeration value="Closed" />
+                    <xs:enumeration value="Canceled" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+    <xs:element name="Company">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "Authors">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Author" type="zam:Author" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ProductsRepository">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Product" type="zam:Product" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Orders">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Order" type="zam:Order" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:keyref name="productIdKeyRef" refer="zam:productIdKey">
+            <xs:selector xpath="Company/Orders/Items/*" />
+                <xs:field xpath="ProductId" />
+            </xs:keyref>
+            <xs:key name="productIdKey">
+                <xs:selector xpath="Company/ProductsRepository/*" />
+            <xs:field xpath="ProductId" />
+        </xs:key>
+    </xs:element>
+</xs:schema>

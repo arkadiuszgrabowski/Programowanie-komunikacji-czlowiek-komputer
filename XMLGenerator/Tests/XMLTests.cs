@@ -12,7 +12,7 @@ namespace Tests
         [TestMethod]
         public void GeneraterXml()
         {
-            string dateTimeFormat = "yyyy-MM-dd H:mm:ss";
+            string dateTimeFormat = "yyyy-MM-ddTH:mm:ss";
             string deliveryDateTimeFormat = "yyyy-MM-dd";
             Author arek = new Author("Arkadiusz", "Grabowski", "210191");
             Author kacper = new Author("Kacper", "Prądzyński", "210299");
