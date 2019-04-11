@@ -71,7 +71,13 @@ targetNamespace="zam" elementFormDefault="qualified">
                 </xs:simpleType>
             </xs:element>
         </xs:sequence>
-        <xs:attribute name="ProductId" use="required" />
+        <xs:attribute name="ProductId" use="required" >
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="x\w{8}-\w{4}-\w{4}-\w{4}-\w{12}" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
     </xs:complexType>
 
     <xs:complexType name="Order">
@@ -140,13 +146,13 @@ targetNamespace="zam" elementFormDefault="qualified">
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
-        <xs:keyref name="productIdKeyRef" refer="zam:productIdKey">
-            <xs:selector xpath="Company/Orders/Items/*" />
-                <xs:field xpath="ProductId" />
-            </xs:keyref>
-            <xs:key name="productIdKey">
-                <xs:selector xpath="Company/ProductsRepository/*" />
-            <xs:field xpath="ProductId" />
+        <xs:key name="productIdKey">
+            <xs:selector xpath="Company/ProductsRepository/Product" />
+            <xs:field xpath="@ProductId" />
         </xs:key>
+        <xs:keyref name="productIdKeyRef" refer="zam:productIdKey">
+            <xs:selector xpath="Company/Orders/Order/Items/Item" />
+            <xs:field xpath="@ProductId" />
+        </xs:keyref>
     </xs:element>
 </xs:schema>
