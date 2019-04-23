@@ -6,7 +6,7 @@
         <Stats>
             <NumberOfTypesOfProducts>12</NumberOfTypesOfProducts>
             <AmountOfSoldProducts>236</AmountOfSoldProducts>
-            <TotalPriceOfOrders>727903.11</TotalPriceOfOrders>
+            <TotalPriceOfOrders>727903.11zł</TotalPriceOfOrders>
         </Stats>
         <ClosedOrders>
             <OrderId>x9782da93-48e5-4749-b968-7e7f7d13dc39</OrderId>
@@ -54,7 +54,7 @@
             </Author>
         </Authors>
         <ReportDate>
-            <Date>2019-04-23T11:35:46+02:00</Date>
+            <Date>2019-04-23T19:43:35+02:00</Date>
         </ReportDate>
     </Report>
 </Generated>

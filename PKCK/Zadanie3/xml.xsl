@@ -19,7 +19,7 @@
                         <xsl:value-of select="sum(//Company/Orders/Order/Items/Item/Quantity)" />
                     </AmountOfSoldProducts>
                     <TotalPriceOfOrders>
-                        <xsl:value-of select="sum(//Company/Orders/Order/OrderPrice)" />
+                        <xsl:value-of select="concat(sum(//Company/Orders/Order/OrderPrice), 'zł')" />
                     </TotalPriceOfOrders>
                 </Stats>
                 <ClosedOrders>
