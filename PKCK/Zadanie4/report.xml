@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="pdf.xsl" type="text/xsl" ?>
 <Generated>
-    <?xml-stylesheet href="style.css" type="text/css" ?>
     <Report>
         <Stats>
             <NumberOfTypesOfProducts>12</NumberOfTypesOfProducts>

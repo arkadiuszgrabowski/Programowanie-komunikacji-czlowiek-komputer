@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+    <fo:layout-master-set>
+        <fo:simple-page-master master-name="Generated" page-height="297mm" page-width="210mm" margin-top="20" margin-bottom="40" margin-left="50" margin-right="50">
+            <fo:region-body margin="30,10" />
+            <fo:region-before extent="5" />
+            <fo:region-after extent="5" />
+            <fo:region-start extent="5" />
+            <fo:region-end extent="5" />
+        </fo:simple-page-master>
+    </fo:layout-master-set>
+    <fo:page-sequence master-reference="Generated">
+        <fo:static-content flow-name="xsl-region-before">
+            <fo:block text-align="center" font-family="Segoe UI" font-size="20px">
+                Shop orders report:
+                <fo:block text-align="center" font-family="Segoe UI" font-size="10px">
+                            [Generated:
+                            2019-04-2319:43:35
+                            ]
+                        </fo:block>
+            </fo:block>
+        </fo:static-content>
+        <fo:static-content flow-name="xsl-region-after">
+            <fo:block text-align="center" font-family="Segoe UI" font-size="10px">
+                page
+                <fo:page-number />
+            </fo:block>
+        </fo:static-content>
+        <fo:flow flow-name="xsl-region-body">
+            <fo:block font-size="16px" text-align="left" font-family="Segoe UI" margin="25">
+                <fo:block>Authors:&#13;
+</fo:block>
+                <fo:block>
+                    <fo:block font-size="16px" text-align="left" font-family="Segoe UI">
+                        <fo:block>
+                            <fo:block margin-left="5mm">Arkadiusz&#13;
+Grabowski&#13;
+
+                    (
+                    210191
+                    )
+                </fo:block>
+                        </fo:block>
+                    </fo:block>
+                    <fo:block font-size="16px" text-align="left" font-family="Segoe UI">
+                        <fo:block>
+                            <fo:block margin-left="5mm">Kacper&#13;
+Prądzyński&#13;
+
+                    (
+                    210299
+                    )
+                </fo:block>
+                        </fo:block>
+                    </fo:block>
+                </fo:block>
+            </fo:block>
+            <fo:block>
+                <fo:table border="solid black" width="100%">
+                    <fo:table-header>
+                        <fo:table-row>
+                            <fo:table-cell border="none">
+                                <fo:block font-weight="bold" text-align="center">Name</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="none">
+                                <fo:block font-weight="bold" text-align="center">Value</fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                    </fo:table-header>
+                    <fo:table-body>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Number of types of products
+                            </fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">12</fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Amount of sold products
+                            </fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">236</fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Total price of orders
+                            </fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">727903.11zł</fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                    </fo:table-body>
+                </fo:table>
+            </fo:block>
+            <fo:block> </fo:block>
+            <fo:block font-weight="bold" font-size="16px" text-align="center">
+            ORDERS
+        </fo:block>
+            <fo:block>
+                <fo:table border="solid black" width="100%">
+                    <fo:table-header>
+                        <fo:table-row>
+                            <fo:table-cell border="none">
+                                <fo:block font-weight="bold" text-align="center">ID</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="none">
+                                <fo:block font-weight="bold" text-align="center">Type</fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                    </fo:table-header>
+                    <fo:table-body>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">x9782da93-48e5-4749-b968-7e7f7d13dc39</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Closed
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">x925397f2-59f2-4af5-9d1f-cc294c08b028</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Closed
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">xfaf10641-83db-4557-acf5-b7281446c594</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Closed
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">xe090cd43-cc4c-4d2e-a617-703fd48196a4</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Closed
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">x076f7c80-f165-4630-ae73-677855ea36db</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Canceled
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">xadc0c59a-a418-4d64-8ae6-5b2af8847112</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Canceled
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">x2917ecdb-80dc-4a13-b36d-e3a52b0b4bcf</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Canceled
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">x2c803e20-7c18-47d3-99cc-da657bf9c9a5</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Canceled
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">x1ce96abf-d1c3-4479-a60b-de007f90a444</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Canceled
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">x0002f12f-f9e6-4cb8-b69a-db88b8714ad0</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Canceled
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">xa910cfcb-f103-41d2-a1a1-72a65ccfbd72</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Canceled
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">x349a652d-e276-442f-9cea-ffbc777729f5</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                New
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">xeebbd78a-a322-4875-b12d-bc4b7c141d6c</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Processing
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">x18628337-dc2b-43be-b904-7c1313630d61</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Processing
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">x94764aba-66a3-4875-9be9-d96aa233f488</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Completed
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">xe9b53b6a-ded6-4356-9a2f-0bce59c6b953</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Completed
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">x1c7979cd-c8ec-4c62-8a02-c011b78987fe</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Completed
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">xfa8693a8-e73a-4585-a206-afa2a5336da7</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Completed
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">x3c412650-f45a-404a-a9ac-e9a060383993</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Completed
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">xbd21daa4-9b43-4f33-957e-8cf3d1f0453c</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Completed
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">x7aa28ef4-4617-4434-9d49-5442571e924d</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Completed
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">xf922fa2b-df9f-4dac-950b-4ce788982406</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Completed
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">xdf463b56-69e7-4a64-9d6a-904d8afad70a</fo:block>
+                            </fo:table-cell>
+                            <fo:table-cell border="solid black">
+                                <fo:block text-align="center">
+                                Completed
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                    </fo:table-body>
+                </fo:table>
+            </fo:block>
+        </fo:flow>
+    </fo:page-sequence>
+</fo:root>
