@@ -7,28 +7,37 @@
                 Shop orders report
             </svg:title>
             <rect x="100" y="30" width="400" height="320" fill="#F5DA81" stroke="black" />
-            <rect x="110" y="70" width="{count(/Generated/Report/ClosedOrders/OrderId)*40}" height="30" fill="blue" />
+            <rect x="110" y="70" width="{count(/Generated/Report/ClosedOrders/OrderId)*40}" height="30" fill="blue">
+            </rect>
             <svg:text x="490" y="90" fill="black" font-weight="bold" text-anchor="middle">
                 <xsl:value-of select="count(/Generated/Report/ClosedOrders/OrderId)" />
             </svg:text>
-            <rect x="110" y="110" width="{count(/Generated/Report/CanceledOrders/OrderId)*40}" height="30" fill="#DF0101" />
+            <rect x="110" y="110" width="{count(/Generated/Report/CanceledOrders/OrderId)*40}" height="30" fill="#DF0101">
+            </rect>
             <svg:text x="490" y="130" fill="black" font-weight="bold" text-anchor="middle">
                 <xsl:value-of select="count(/Generated/Report/CanceledOrders/OrderId)" />
             </svg:text>
-            <rect x="110" y="150" width="{count(/Generated/Report/NewOrders/OrderId)*40}" height="30" fill="#000000" />
+            <rect x="110" y="150" width="{count(/Generated/Report/NewOrders/OrderId)*40}" height="30" fill="#000000">
+                <animate attributeName="width" to="{count(/Generated/Report/NewOrders/OrderId)*40}" dur="10s" fill="freeze" />
+            </rect>
             <svg:text x="490" y="170" fill="black" font-weight="bold" text-anchor="middle">
                 <xsl:value-of select="count(/Generated/Report/NewOrders/OrderId)" />
             </svg:text>
-            <rect x="110" y="190" width="{count(/Generated/Report/ProcessingOrders/OrderId)*40}" height="30" fill="#01DF01" />
+            <rect x="110" y="190" width="{count(/Generated/Report/ProcessingOrders/OrderId)*40}" height="30" fill="#01DF01">
+                <animate attributeName="width" to="{count(/Generated/Report/ProcessingOrders/OrderId)*40}" dur="10s" fill="freeze" />
+            </rect>
             <svg:text x="490" y="210" fill="black" font-weight="bold" text-anchor="middle">
                 <xsl:value-of select="count(/Generated/Report/ProcessingOrders/OrderId)" />
             </svg:text>
-            <rect x="110" y="230" width="{count(/Generated/Report/CompletedOrders/OrderId)*40}" height="30" fill="#FF00BF" />
+            <rect x="110" y="230" width="{count(/Generated/Report/CompletedOrders/OrderId)*40}" height="30" fill="#FF00BF">
+                <animate attributeName="width" to="{count(/Generated/Report/CompletedOrders/OrderId)*40}" dur="10s" fill="freeze" />
+            </rect>
             <svg:text x="490" y="250" fill="black" font-weight="bold" text-anchor="middle">
                 <xsl:value-of select="count(/Generated/Report/CompletedOrders/OrderId)" />
             </svg:text>
-            <svg:text x="300" y="50" font-size="18" fill="black" font-weight="bold" text-anchor="middle">
+            <svg:text x="300" y="0" font-size="18" fill="black" font-weight="bold" text-anchor="middle">
                 Shop orders report
+                <animate attributeName="y" dur="5s" fill="freeze" from="0" to="50" />
             </svg:text>
             <line id="axis-y" x1="105" y1="60" x2="105" y2="270" style="fill:none;stroke:rgb(0,0,0);stroke-width:2" />
             <line id="axis-x" x1="105" y1="270" x2="490" y2="270" style="fill:none;stroke:rgb(0,0,0);stroke-width:2" />
