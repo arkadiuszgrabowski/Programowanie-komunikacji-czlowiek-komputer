@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:zam="zam" targetNamespace="zam" elementFormDefault="qualified">
+    
+    <xs:simpleType name="NumberOfTypesOfProducts">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:totalDigits value="5" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:element name="Generated">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Report" type="zam:Report"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="Report">
+        <xs:sequence>
+            <xs:element name="Stats" type="zam:Stats"></xs:element>
+            <xs:element name="ClosedOrders" type="zam:ClosedOrders" />
+            <xs:element name="CanceledOrders" type="zam:CanceledOrders" />
+            <xs:element name="NewOrders" type="zam:NewOrders" />
+            <xs:element name="ProcessingOrders" type="zam:ProcessingOrders" />
+            <xs:element name="CompletedOrders" type="zam:CompletedOrders" />
+            <xs:element name="Authors" type="zam:Authors"/>
+            <xs:element name="ReportDate" type="zam:ReportDate"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+    <xs:complexType name="Stats">
+        <xs:sequence>
+            <xs:element name="NumberOfTypesOfProducts" type="zam:NumberOfTypesOfProducts" />
+            <xs:element name="AmountOfSoldProducts" type="xs:positiveInteger" />
+            <xs:element name="TotalPriceOfOrders" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="OrderId">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="x\w{8}-\w{4}-\w{4}-\w{4}-\w{12}" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="CompletedOrders">
+        <xs:sequence>
+            <xs:element name="OrderId" type="zam:OrderId" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ProcessingOrders">
+        <xs:sequence>
+            <xs:element name="OrderId" type="zam:OrderId" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="NewOrders">
+        <xs:sequence>
+            <xs:element name="OrderId" type="zam:OrderId" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="CanceledOrders">
+        <xs:sequence>
+            <xs:element name="OrderId" type="zam:OrderId" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ClosedOrders">
+        <xs:sequence>
+            <xs:element name="OrderId" type="zam:OrderId" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Authors">
+        <xs:sequence>
+            <xs:element name="Author" type="zam:Author" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Author">
+        <xs:sequence>
+            <xs:element name="Forename" type="xs:string" />
+            <xs:element name="Name" type="xs:string" />
+            <xs:element name="ID">
+                <xs:simpleType>
+                    <xs:restriction base="xs:positiveInteger">
+                        <xs:totalDigits value="6" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ReportDate">
+        <xs:sequence>
+            <xs:element name="Date" type="xs:dateTime"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>
