@@ -1,12 +1,11 @@
-﻿using Library;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using System.Windows;
 
 namespace XMLGenerator
 {
-    public class OpenDialogPath : IOpenDialogPath
+    public static class OpenDialogPath
     {
-        public string GetPath()
+        public static string GetPath()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog
             {

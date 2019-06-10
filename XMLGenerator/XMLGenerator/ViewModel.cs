@@ -1,11 +1,11 @@
 ﻿using System.Windows.Input;
-using Library.MVVM;
+using XMLGenerator.MVVM;
 
-namespace Library.TreeView
+namespace XMLGenerator
 {
-    public class TreeViewModel : ViewModelBase
+    public class ViewModel : ViewModelBase
     {
-        public TreeViewModel()
+        public ViewModel()
         {
             Click_Browse = new RelayCommand(Browse);
             Click_Serialize = new RelayCommand(SerializeTask);
@@ -15,10 +15,9 @@ namespace Library.TreeView
         public ICommand Click_Browse { get; }
         public ICommand Click_Serialize { get; }
         public ICommand Click_Deserialize { get; }
-        public IOpenDialogPath GetPath { get; set; }
         private void Browse()
         {
-            PathVariable = GetPath.GetPath();
+            PathVariable = OpenDialogPath.GetPath();
         }
         private void SerializeTask()
         {

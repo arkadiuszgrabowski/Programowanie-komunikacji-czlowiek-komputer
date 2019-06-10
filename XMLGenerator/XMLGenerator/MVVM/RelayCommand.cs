@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace Library.MVVM
+namespace XMLGenerator.MVVM
 {
     public class RelayCommand : ICommand
     {

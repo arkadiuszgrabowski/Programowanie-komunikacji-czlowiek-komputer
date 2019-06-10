@@ -14,9 +14,9 @@
             </svg:text>
             <rect x="110" y="110" width="{count(/Generated/Report/CanceledOrders/OrderId)*40}" height="30" fill="#DF0101">
             </rect>
-            <svg:text x="490" y="130" fill="black" font-weight="bold" text-anchor="middle">
+            <text x="490" y="130" fill="black" font-weight="bold" text-anchor="middle">
                 <xsl:value-of select="count(/Generated/Report/CanceledOrders/OrderId)" />
-            </svg:text>
+            </text>
             <rect x="110" y="150" width="{count(/Generated/Report/NewOrders/OrderId)*40}" height="30" fill="#000000">
                 <animate attributeName="width" to="{count(/Generated/Report/NewOrders/OrderId)*40}" dur="10s" fill="freeze" />
             </rect>

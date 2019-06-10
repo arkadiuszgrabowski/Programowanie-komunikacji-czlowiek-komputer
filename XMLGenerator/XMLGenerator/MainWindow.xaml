@@ -3,13 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:lib="clr-namespace:Library.TreeView;assembly=Library"
         xmlns:local="clr-namespace:XMLGenerator"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <!--<Window.DataContext>
-        <lib:TreeViewModel/>
-    </Window.DataContext>-->
+    <Window.DataContext>
+        <local:ViewModel />
+    </Window.DataContext>
     <Grid>
         <Button x:Name="Serialize" Content="Serialize"  Command="{Binding Click_Serialize}" HorizontalAlignment="Left" Margin="48,199,0,0" VerticalAlignment="Top" Width="76" Height="25" />
         <Button x:Name="Deserialize" Content="Deserialize"  Command="{Binding Click_Deserialize}" HorizontalAlignment="Left" Margin="182,199,0,0" VerticalAlignment="Top" Width="74" Height="25" />
