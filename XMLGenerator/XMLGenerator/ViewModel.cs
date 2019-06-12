@@ -20,6 +20,8 @@ namespace XMLGenerator
             Click_Serialize = new RelayCommand(SerializeTask);
             Click_AddAuthor = new RelayCommand(AddAuthor);
             Click_RemoveAuthor = new RelayCommand(RemoveAuthor);
+            Click_AddProduct = new RelayCommand(AddProduct);
+            Click_RemoveProduct = new RelayCommand(RemoveProduct);
             CreateMenuItems();
         }
         public string PathVariable { get; set; }
@@ -27,6 +29,8 @@ namespace XMLGenerator
         public ICommand Click_Serialize { get; }
         public ICommand Click_AddAuthor { get; }
         public ICommand Click_RemoveAuthor { get; }
+        public ICommand Click_AddProduct { get; }
+        public ICommand Click_RemoveProduct { get; }
         public Company CompanyGrid { get; set; }
         public ObservableCollection<Product> Products { get; set; }
         public ObservableCollection<Author> Authors { get; set; }
@@ -47,7 +51,7 @@ namespace XMLGenerator
             set
             {
                 selectedProduct = value;
-                RaisePropertyChanged(nameof(SelectedAuthor));
+                RaisePropertyChanged(nameof(SelectedProduct));
             }
         }
         public Order SelectedOrder
@@ -56,7 +60,7 @@ namespace XMLGenerator
             set
             {
                 selectedOrder = value;
-                RaisePropertyChanged(nameof(SelectedAuthor));
+                RaisePropertyChanged(nameof(SelectedOrder));
             }
         }
         private void CreateAuthors()
@@ -93,6 +97,14 @@ namespace XMLGenerator
         private void RemoveAuthor()
         {
             Authors.Remove(SelectedAuthor);
+        }
+        private void AddProduct()
+        {
+            Products.Add(new Product("Name", 0));
+        }
+        private void RemoveProduct()
+        {
+            Products.Remove(SelectedProduct);
         }
         private void Browse()
         {

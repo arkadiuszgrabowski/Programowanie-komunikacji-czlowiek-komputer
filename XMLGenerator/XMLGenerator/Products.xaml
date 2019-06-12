@@ -18,7 +18,7 @@ Products
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <GroupBox Header="Products"
+            <GroupBox Header="List"
                       Margin="5">
                 <StackPanel>
                     <ListView Margin="5"
@@ -48,11 +48,11 @@ Products
                                              VerticalAlignment="Bottom">
                         <StackPanel Orientation="Horizontal">
                             <Button ToolTip="Add an item"
-                                    Command="{Binding Click_AddAuthor}">
+                                    Command="{Binding Click_AddProduct}">
                                 <materialDesign:PackIcon Kind="Add" />
                             </Button>
                             <Button ToolTip="Remove selected item"
-                                    Command="{Binding Click_RemoveAuthor}">
+                                    Command="{Binding Click_RemoveProduct}">
                                 <materialDesign:PackIcon Kind="Bin" />
                             </Button>
                         </StackPanel>
@@ -66,11 +66,11 @@ Products
                 <StackPanel  DataContext="{Binding SelectedProduct}">
                     <TextBox Margin="5"
                              materialDesign:HintAssist.Hint="Name"
-                             Text="{Binding Forename, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                             Text="{Binding Name, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                              Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                     <TextBox Margin="5"
                              materialDesign:HintAssist.Hint="Price"
-                             Text="{Binding Name, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                             Text="{Binding ProductPrice, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                              Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                 </StackPanel>
             </GroupBox>
