@@ -123,7 +123,7 @@ namespace Tests
             #endregion
             List<Order> orders = new List<Order>(new Order[] { order1, order2, order3, order4, order5, order6, order7, order8, order9, order10,
             order11, order12, order13, order14, order15, order16, order17, order18, order19, order20, order21, order22, order23});
-            Company company = new Company(orders, ProductsRepository.GetAll(), authors);
+            Company company = new Company(orders, ProductsRepository.GetAll(), authors, "zam schema.xsd");
             XmlSerialization.Serialize(company, "zadanie1.xml");
         }
     }
