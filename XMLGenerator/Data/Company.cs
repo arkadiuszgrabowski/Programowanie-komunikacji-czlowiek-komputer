@@ -7,6 +7,7 @@ using System.Xml.Serialization;
 
 namespace Data
 {
+    [XmlRoot(Namespace ="zam")]
     public class Company
     {
 

@@ -6,28 +6,100 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XMLGenerator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="Arkadiusz Grabowski 210191 i Kacper Prądzyński 210299"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal"
-        TextOptions.TextRenderingMode="Auto">
+        TextOptions.TextRenderingMode="Auto"
+        Height="600"
+        Width="800"
+        ResizeMode="NoResize">
     <Window.DataContext>
         <local:ViewModel />
     </Window.DataContext>
-    <Grid>
-        <Grid Margin="0,0,400,0">
-            <Button Style="{StaticResource MaterialDesignRaisedButton}"
-                    Width="100"
-                    ToolTip="Resource name: MaterialDesignRaisedButton"
-                    Command="{Binding Click_Browse}">
-                Open XML
-            </Button>
-        </Grid>
-        <Grid Margin="400,0,0,0">
-            
-        </Grid>
-    </Grid>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Shadows.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <materialDesign:DialogHost Identifier="RootDialog"
+                               SnackbarMessageQueue="{Binding ElementName=MainSnackbar, Path=MessageQueue}">
+        <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
+            <materialDesign:DrawerHost.LeftDrawerContent>
+                <DockPanel MinWidth="160">
+                    <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}"
+                                  DockPanel.Dock="Top"
+                                  HorizontalAlignment="Right"
+                                  Margin="16"
+                                  IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}" />
+                    <ListBox x:Name="DemoItemsListBox"
+                             Margin="0 16 0 16"
+                             SelectedIndex="0"
+                             ItemsSource="{Binding ListOfMenuItems}"
+                             PreviewMouseLeftButtonUp="UIElement_OnPreviewMouseLeftButtonUp">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate DataType="UserPages">
+                                <TextBlock Text="{Binding Name}"
+                                           Margin="32 0 32 0" />
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </DockPanel>
+            </materialDesign:DrawerHost.LeftDrawerContent>
+            <DockPanel>
+                <materialDesign:ColorZone Padding="16"
+                                          materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                          Mode="PrimaryMid"
+                                          DockPanel.Dock="Top">
+                    <DockPanel>
+
+                        <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}"
+                                      IsChecked="False"
+                                      x:Name="MenuToggleButton" />
+                        <TextBlock HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="22">PKCK</TextBlock>
+                    </DockPanel>
+                </materialDesign:ColorZone>
+                <Grid>
+                    <Menu IsMainMenu="True"
+                          Margin="0,0,694,447">
+                        <MenuItem Header="_File">
+                            <MenuItem Header="Save"
+                                      Command="{Binding Click_Serialize}">
+                                <MenuItem.Icon>
+                                    <materialDesign:PackIcon Kind="ContentSave" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem Header="Open"
+                                      Command="{Binding Click_Browse}">
+                                <MenuItem.Icon>
+                                    <materialDesign:PackIcon Kind="OpenInApp" />
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </MenuItem>
+                    </Menu>
+                    <Grid Margin="0,70,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <ContentControl Content="{Binding ElementName=DemoItemsListBox, Path=SelectedItem.Content}" />
+
+
+                        <materialDesign:Snackbar MessageQueue="{materialDesign:MessageQueue}"
+                                                 x:Name="MainSnackbar"
+                                                 Grid.Row="1" />
+                    </Grid>
+                </Grid>
+            </DockPanel>
+        </materialDesign:DrawerHost>
+    </materialDesign:DialogHost>
 </Window>

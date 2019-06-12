@@ -12,7 +12,7 @@ namespace Logic
         { 
             XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
             ns.Add("xsi", "http://www.w3.org/2001/XMLSchema-instance");
-            XmlSerializer serializer = new XmlSerializer(typeof(Company), "zam");
+            XmlSerializer serializer = new XmlSerializer(typeof(Company));
             using (XmlWriter w = XmlWriter.Create(fileName))
             {
                 w.WriteProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"xhtml.xsl\"");
