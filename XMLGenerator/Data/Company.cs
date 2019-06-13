@@ -20,7 +20,7 @@ namespace Data
             Orders = orders;
             ProductsRepository = products;
             Authors = authors;
-            SchemaLocation = schemaLocation;
+            this.schemaLocation = schemaLocation;
         }
         [XmlArrayItem("Author")]
         public List<Author> Authors { get; set; }
@@ -29,7 +29,7 @@ namespace Data
         [XmlArrayItem("Order")]
         public List<Order> Orders { get; set; }
         [XmlAttribute(Form = System.Xml.Schema.XmlSchemaForm.Qualified, Namespace = "http://www.w3.org/2001/XMLSchema-instance")]
-        public string SchemaLocation { get; set; }
+        public string schemaLocation { get; set; }
         
     }
 }
