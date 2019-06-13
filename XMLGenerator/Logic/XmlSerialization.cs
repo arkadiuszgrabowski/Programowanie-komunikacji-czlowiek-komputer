@@ -20,7 +20,6 @@ namespace Logic
                 w.WriteProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"xhtml.xsl\"");
                 serializer.Serialize(w, objectToSerialize, ns);
             }
-            CheckValidity(fileName);
         }
 
         public static Company Deserialize(string fileName)
@@ -53,7 +52,7 @@ namespace Logic
             try
             {
                 XmlReaderSettings settings = new XmlReaderSettings();
-                settings.Schemas.Add("zam", "schema.xsd");
+                settings.Schemas.Add("zam", "../../../Data/schema.xsd");
                 settings.ValidationType = ValidationType.Schema;
 
                 using (XmlReader reader = XmlReader.Create(fileName, settings))
