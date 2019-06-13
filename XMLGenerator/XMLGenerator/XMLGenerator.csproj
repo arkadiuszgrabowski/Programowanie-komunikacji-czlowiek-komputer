@@ -71,6 +71,7 @@
     <Compile Include="Products.xaml.cs">
       <DependentUpon>Products.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SaveFilePath.cs" />
     <Compile Include="UserPages.cs" />
     <Compile Include="ViewModel.cs" />
     <Page Include="Authors.xaml">

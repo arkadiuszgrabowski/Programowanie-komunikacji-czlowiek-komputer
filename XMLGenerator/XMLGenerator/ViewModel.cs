@@ -1,9 +1,11 @@
 ﻿using Data;
 using Logic;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Windows;
 using System.Windows.Input;
 using XMLGenerator.MVVM;
 
@@ -22,6 +24,8 @@ namespace XMLGenerator
             Click_RemoveAuthor = new RelayCommand(RemoveAuthor);
             Click_AddProduct = new RelayCommand(AddProduct);
             Click_RemoveProduct = new RelayCommand(RemoveProduct);
+            Click_AddOrder = new RelayCommand(AddOrder);
+            Click_RemoveOrder = new RelayCommand(RemoveOrder);
             CreateMenuItems();
         }
         public string PathVariable { get; set; }
@@ -31,6 +35,8 @@ namespace XMLGenerator
         public ICommand Click_RemoveAuthor { get; }
         public ICommand Click_AddProduct { get; }
         public ICommand Click_RemoveProduct { get; }
+        public ICommand Click_AddOrder { get; }
+        public ICommand Click_RemoveOrder { get; }
         public Company CompanyGrid { get; set; }
         public ObservableCollection<Product> Products { get; set; }
         public ObservableCollection<Author> Authors { get; set; }
@@ -106,21 +112,45 @@ namespace XMLGenerator
         {
             Products.Remove(SelectedProduct);
         }
+        private void AddOrder()
+        {
+            string dateTimeFormat = "yyyy-MM-ddTH:mm:ss";
+            string deliveryDateTimeFormat = "yyyy-MM-dd";
+            Product product = new Product("Myszka Logitech", 100);
+            ProductsRepository.Add(product);
+            Orders.Add(new Order(new List<Item>() { new Item(product, 2) }, new Address("City", "Street", "Property", "ZipCode"),
+                DateTime.Now.ToString(dateTimeFormat), DateTime.Now.AddDays(2).ToString(deliveryDateTimeFormat), OrderType.Complete));
+        }
+        private void RemoveOrder()
+        {
+            Orders.Remove(SelectedOrder);
+        }
         private void Browse()
         {
             PathVariable = OpenDialogPath.GetPath();
             if (PathVariable != null)
             {
-                CompanyGrid = XmlSerialization.Deserialize(PathVariable);
-            }
-            CreateProducts();
-            CreateAuthors();
-            CreateOrders();
+                try
+                {
+                    CompanyGrid = XmlSerialization.Deserialize(PathVariable);
+                    CreateProducts();
+                    CreateAuthors();
+                    CreateOrders();
+                }
+                catch(Exception e)
+                {
+                    MessageBox.Show(e.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            } 
         }
         private void SerializeTask()
         {
             Company company = new Company(Orders.ToList(), Products.ToList(), Authors.ToList(), "zam schema.xsd");
-            XmlSerialization.Serialize(company, "nowy.xml");
+            PathVariable = SaveFilePath.GetPath();
+            if (PathVariable != null)
+            {
+                XmlSerialization.Serialize(company, PathVariable);
+            }
         }
         private void CreateMenuItems()
         {

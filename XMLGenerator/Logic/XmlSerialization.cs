@@ -69,6 +69,7 @@ namespace Logic
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
+                throw new Exception(ex.Message);
             }
         }
     }

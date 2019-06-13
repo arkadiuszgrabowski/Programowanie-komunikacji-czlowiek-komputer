@@ -19,7 +19,7 @@ Orders
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <GroupBox Header="List"
-                      Margin="5,5,5,32">
+                      Margin="5,5,5,58">
                 <StackPanel>
                     <ListView Margin="5"
                               ItemsSource="{Binding Orders, UpdateSourceTrigger=PropertyChanged}"
@@ -52,11 +52,11 @@ Orders
                                              VerticalAlignment="Bottom">
                         <StackPanel Orientation="Horizontal">
                             <Button ToolTip="Add an item"
-                                    Command="{Binding Click_AddAuthor}">
+                                    Command="{Binding Click_AddOrder}">
                                 <materialDesign:PackIcon Kind="Add" />
                             </Button>
                             <Button ToolTip="Remove selected item"
-                                    Command="{Binding Click_RemoveAuthor}">
+                                    Command="{Binding Click_RemoveOrder}">
                                 <materialDesign:PackIcon Kind="Bin" />
                             </Button>
                         </StackPanel>
@@ -65,16 +65,20 @@ Orders
             </GroupBox>
             <GroupBox Grid.Column="1"
                       Header="Order"
-                      Margin="5,5,5,32">
+                      Margin="5,5,5,58">
                 <StackPanel  DataContext="{Binding SelectedOrder}">
                     <TextBox Margin="5"
                              materialDesign:HintAssist.Hint="Estimated delivery"
                              Text="{Binding EstimatedDelivery, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                              Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBox Margin="5"
+                             materialDesign:HintAssist.Hint="Type"
+                             Text="{Binding Type, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                 </StackPanel>
             </GroupBox>
             <GroupBox Header="Address"
-                      Margin="5,179,5,32"
+                      Margin="5,153,5,58"
                       Grid.Column="1">
                 <StackPanel  DataContext="{Binding SelectedOrder.Address}">
                     <TextBox Margin="5"
@@ -84,6 +88,14 @@ Orders
                     <TextBox Margin="5"
                              materialDesign:HintAssist.Hint="Street"
                              Text="{Binding Street, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBox Margin="5"
+                             materialDesign:HintAssist.Hint="Property"
+                             Text="{Binding Property, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBox Margin="5"
+                             materialDesign:HintAssist.Hint="ZipCode"
+                             Text="{Binding ZipCode, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                              Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                 </StackPanel>
             </GroupBox>
